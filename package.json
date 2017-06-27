@@ -1,0 +1,51 @@
+{
+  "name": "your-awesome-app",
+  "version": "0.0.1",
+  "description": "my first electrode app",
+  "homepage": "",
+  "author": {
+    "name": "VimalRaj Selvam",
+    "email": "email2vimalraj@gmail.com",
+    "url": ""
+  },
+  "contributors": [],
+  "files": [
+    "server",
+    "client",
+    "test"
+  ],
+  "main": "server/index.js",
+  "keywords": [
+    "awesome-app"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "email2vimalraj/your-awesome-app"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": ">= 4 <= 8",
+    "npm": ">= 3 <= 5"
+  },
+  "scripts": {
+    "prestart": "clap build",
+    "start": "if test \"$NODE_ENV\" = \"production\"; then npm run prod; else clap dev; fi",
+    "test": "clap check",
+    "coverage": "clap check",
+    "prod": "echo 'Starting standalone server in PROD mode'; NODE_ENV=production node ./lib/server/",
+    "heroku-postbuild": "clap build"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "electrode-archetype-react-app": "^3.0.5",
+    "electrode-confippet": "^1.0.0",
+    "electrode-react-webapp": "^1.1.0",
+    "electrode-redux-router-engine": "^1.2.2",
+    "express": "^4.0.0",
+    "lodash": "^4.10.1"
+  },
+  "devDependencies": {
+    "electrode-archetype-react-app-dev": "^3.0.0",
+    "xclap": "^0.2.2"
+  }
+}
